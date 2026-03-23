@@ -754,7 +754,7 @@ Son Guncelleme: Ocak 2026`
 )}
       </div>
     );
-};
+}
       
 
         <button 
