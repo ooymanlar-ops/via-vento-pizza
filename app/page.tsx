@@ -327,7 +327,7 @@ Son Guncelleme: Ocak 2026`
   preload="auto"
   className="absolute inset-0 w-full h-full object-cover"
 >
-  <source src="https://www.pexels.com/video/close-up-shot-of-a-person-kneading-a-dough-7004352/.mp4" type="video/mp4" />
+  <source src="/hero-video.mp4" type="video/mp4" />
 </video>
         
         {/* Radial Gradient Overlay */}
