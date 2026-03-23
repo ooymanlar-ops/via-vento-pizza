@@ -696,20 +696,27 @@ Son Guncelleme: Ocak 2026`
               )}
             </div>
 
-            {/* Bottom Actions - Sadece sepet ve ödeme formundayken görünür */}
+           {/* Bottom Actions */}
             {cart.length > 0 && cartView !== "success" && cartView !== "loading" && (
-              <div className="border-t border-white/10 p-5 md:p-6 bg-zinc-950 flex-shrink-0">
+              <div className="border-t border-white/10 p-5 md:p-6 flex-shrink-0 bg-zinc-950">
                 <div className="flex justify-between items-center mb-4 px-1">
                   <span className="text-zinc-500 font-medium">Toplam</span>
                   <span className="text-2xl font-black text-[#E8D5B7]">{totalPrice} TL</span>
                 </div>
                 
                 {cartView === "cart" ? (
-                  <button onClick={handleCheckout} className="w-full bg-[#E8D5B7] text-black hover:bg-white py-4 rounded-2xl font-black transition active:scale-95 shadow-lg shadow-orange-950/20">
+                  <button 
+                    onClick={handleCheckout} 
+                    className="w-full bg-[#E8D5B7] text-black hover:bg-white py-4 rounded-2xl font-black transition active:scale-95 shadow-lg shadow-orange-950/20"
+                  >
                     SİPARİŞİ TAMAMLA
                   </button>
                 ) : (
-                  <button type="submit" form="checkoutForm" className="w-full bg-[#E8D5B7] text-black hover:bg-white py-4 rounded-2xl font-black transition flex items-center justify-center gap-2 active:scale-95">
+                  <button 
+                    type="submit" 
+                    form="checkoutForm" 
+                    className="w-full bg-[#E8D5B7] text-black hover:bg-white py-4 rounded-2xl font-black transition flex items-center justify-center gap-2 active:scale-95"
+                  >
                     WHATSAPP'A GİT
                   </button>
                 )}
