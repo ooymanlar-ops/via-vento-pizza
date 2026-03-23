@@ -177,7 +177,7 @@ export default function ViaVentoShop() {
       mahalle: "",
       siteBlok: "",
       daire: "",
-      Sipariş Notu: ""
+      siparisNotu: ""
     })
   }
 
