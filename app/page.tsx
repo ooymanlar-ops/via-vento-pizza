@@ -751,11 +751,10 @@ Son Guncelleme: Ocak 2026`
             </p>
           </div>
         </div>
-)}
+        )}
       </div>
     );
-}
-      
+};
 
         <button 
           onClick={() => {
