@@ -780,10 +780,11 @@ Son Guncelleme: Ocak 2026`
             </button>
           )}
         </div>
+</div>
       )}
     </div>
   );
-};
+}
 
       {/* LEGAL MODAL */}
       {legalModal && (
