@@ -778,13 +778,12 @@ Son Guncelleme: Ocak 2026`
               <CreditCard size={20} />
               ÖDEME YAP
             </button>
-          )}
+         )}
         </div>
       )}
     </div>
   );
 };
-
       {/* LEGAL MODAL */}
       {legalModal && (
         <div 
