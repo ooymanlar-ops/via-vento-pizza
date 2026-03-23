@@ -373,10 +373,11 @@ Son Guncelleme: Ocak 2026`
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {PIZZAS.map((pizza) => (
-            <div 
-              key={pizza.id} 
-              className="group relative bg-zinc-900/50 border border-white/5 rounded-3xl overflow-hidden hover:border-[#E8D5B7]/50 transition-all"
-            >
+           <div
+  key={pizza.id}
+  onClick={() => setSelectedPizza(pizza)}
+  className="group relative bg-zinc-900/50 border border-white/5 rounded-3xl overflow-hidden hover:border-[#E8D5B7]/50 transition-all cursor-pointer"
+>
               <div className="aspect-square overflow-hidden">
                 <Image 
                   src={pizza.image} 
@@ -393,12 +394,11 @@ Son Guncelleme: Ocak 2026`
                   <span className="text-[#E8D5B7] font-black text-sm md:text-base">{pizza.price} TL</span>
                 </div>
                 <p className="text-zinc-500 text-xs md:text-sm line-clamp-2 mb-5 md:mb-6">{pizza.description}</p>
-                <button 
-                  onClick={() => setSelectedPizza(pizza)}
-                  className="w-full bg-white/5 hover:bg-white/10 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition active:scale-95 text-sm md:text-base"
-                >
-                  <Info size={18} /> İncele & Ekle
-                </button>
+                <button
+  className="w-full bg-white/5 hover:bg-white/10 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition active:scale-95 text-sm md:text-base"
+>
+  <Info size={18} /> İncele & Ekle
+</button>
               </div>
             </div>
           ))}
