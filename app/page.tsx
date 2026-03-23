@@ -751,47 +751,39 @@ Son Guncelleme: Ocak 2026`
             </p>
           </div>
         </div>
-        )}
+       )}
       </div>
-    );
-};
 
-        <button 
-          onClick={() => {
-            setCartView("cart");
-            setIsCartOpen(false);
-          }} 
-          className="w-full bg-gradient-to-r from-orange-500 to-red-500 py-4 rounded-2xl font
-
-            {/* Bottom Actions */}
-            {cart.length > 0 && cartView !== "success" && cartView !== "loading" && (
-              <div className="border-t border-white/10 p-5 md:p-6 flex-shrink-0 bg-zinc-900">
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-zinc-400">Toplam</span>
-                  <span className="text-xl md:text-2xl font-black text-[#E8D5B7]">{totalPrice} TL</span>
-                </div>
-                {cartView === "cart" ? (
-                  <button 
-                    onClick={handleCheckout}
-                    className="w-full bg-[#E8D5B7] text-black hover:bg-[#D4C4A8] py-4 rounded-2xl font-bold transition active:scale-95"
-                  >
-                    SIPARISI TAMAMLA
-                  </button>
-                ) : (
-                  <button 
-                    type="submit"
-                    form="checkoutForm"
-                    className="w-full bg-[#E8D5B7] text-black hover:bg-[#D4C4A8] py-4 rounded-2xl font-bold transition flex items-center justify-center gap-2 active:scale-95"
-                  >
-                    <CreditCard size={20} />
-                    ODEME YAP
-                  </button>
-                )}
-              </div>
-            )}
+      {/* Bottom Actions */}
+      {cart.length > 0 && cartView !== "success" && cartView !== "loading" && (
+        <div className="border-t border-white/10 p-5 md:p-6 flex-shrink-0 bg-zinc-900">
+          <div className="flex justify-between items-center mb-4">
+            <span className="text-zinc-400">Toplam</span>
+            <span className="text-xl md:text-2xl font-black text-[#E8D5B7]">{totalPrice} TL</span>
           </div>
+          
+          {cartView === "cart" ? (
+            <button
+              onClick={handleCheckout}
+              className="w-full bg-[#E8D5B7] text-black hover:bg-[#D4C4A8] py-4 rounded-2xl font-bold transition active:scale-95"
+            >
+              SİPARİŞİ TAMAMLA
+            </button>
+          ) : (
+            <button
+              type="submit"
+              form="checkoutForm"
+              className="w-full bg-[#E8D5B7] text-black hover:bg-[#D4C4A8] py-4 rounded-2xl font-bold transition flex items-center justify-center gap-2 active:scale-95"
+            >
+              <CreditCard size={20} />
+              ÖDEME YAP
+            </button>
+          )}
         </div>
       )}
+    </div>
+  );
+};
 
       {/* LEGAL MODAL */}
       {legalModal && (
