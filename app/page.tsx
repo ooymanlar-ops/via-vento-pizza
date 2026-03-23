@@ -751,7 +751,7 @@ Son Guncelleme: Ocak 2026`
             </p>
           </div>
         </div>
-       )}
+      )}
       </div>
 
       {/* Bottom Actions */}
@@ -780,11 +780,10 @@ Son Guncelleme: Ocak 2026`
             </button>
           )}
         </div>
-</div>
       )}
     </div>
   );
-}
+};
 
       {/* LEGAL MODAL */}
       {legalModal && (
