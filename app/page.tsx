@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ShoppingCart, Info, X, ChevronRight, Instagram, CreditCard, CheckCircle, ArrowLeft, Star, Loader2, Send } from "lucide-react"
 
@@ -97,7 +97,14 @@ export default function ViaVentoShop() {
     daire: "",
     siparisNotu: ""
   })
-
+useEffect(() => {
+    if (selectedPizza) {
+      window.history.pushState({ modalOpen: true }, "")
+      const handlePopState = () => setSelectedPizza(null)
+      window.addEventListener("popstate", handlePopState)
+      return () => window.removeEventListener("popstate", handlePopState)
+    }
+  }, [selectedPizza])
   const addToCart = (pizza: Pizza) => {
     const existingItem = cart.find(item => item.id === pizza.id)
     if (existingItem) {
