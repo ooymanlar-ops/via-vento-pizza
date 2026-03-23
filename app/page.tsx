@@ -722,6 +722,18 @@ Son Guncelleme: Ocak 2026`
                 )}
               </div>
             )}
+
+            {/* Bilgisayar Kullanıcıları İçin Çıkış Butonu */}
+            {cartView === "success" && (
+              <div className="p-6 bg-zinc-950 border-t border-white/10 flex-shrink-0">
+                <button 
+                  onClick={() => window.location.reload()} 
+                  className="w-full bg-white text-black py-4 rounded-2xl font-black transition active:scale-95 shadow-xl"
+                >
+                  ANA SAYFAYA DÖN
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}
