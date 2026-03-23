@@ -5,12 +5,13 @@ import './globals.css'
 
 const inter = Inter({ 
   subsets: ["latin", "latin-ext"],
-  variable: '--font-inter'
+  variable: '--font-inter',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: 'Via Vento | Butik Napoli Pizzası',
-  description: 'Eryaman\'ın kalbinde, sadece en iyi malzemelerle hazırlanan butik pizza deneyimi. Dükkânımız dijital, lezzetimiz gerçek.',
+  title: "Via Vento | Butik Napoli Pizzası",
+  description: "Eryaman'ın kalbinde, sadece en iyi malzemelerle hazırlanan butik pizza deneyimi. Dükkânımız dijital, lezzetimiz gerçek.",
   generator: 'v0.app',
   icons: {
     icon: '/images/logo.png',
