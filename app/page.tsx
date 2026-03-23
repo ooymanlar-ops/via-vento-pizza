@@ -177,7 +177,7 @@ export default function ViaVentoShop() {
       mahalle: "",
       siteBlok: "",
       daire: "",
-      siparisNotu: ""
+      Sipariş Notu: ""
     })
   }
 
@@ -199,8 +199,8 @@ export default function ViaVentoShop() {
 Siparisinizi, hazirlik surecine baslanmadan once iptal edebilirsiniz. Hazirlik basladiktan sonra iptal talepleri degerlendirmeye alinmayacaktir.
 
 2. İADE KOŞULLARI
-- Urun teslimatinda herhangi bir sorun yasanmasi halinde, teslimat aninda kurye ile birlikte tutanak tutulmasi gerekmektedir.
-- Hatali veya eksik urun teslimatlarinda, ayni gun icinde tarafimiza bildirilmesi halinde ucretsiz yeniden gonderim yapilacaktir.
+- Ürün teslimatinda herhangi bir sorun yasanması halinde, teslimat anında kurye ile birlikte tutanak tutulması gerekmektedir.
+- Hatali veya eksik urun teslimatlarinda, ayni gun icinde tarafimiza bildirilmesi halinde ucretsiz yeniden gonderim yapılacaktır.
 - Musteri kaynakli (yanlis adres, ulasilamama vb.) sebeplerle gerceklesemeyen teslimatlardan Via Vento Pizza sorumlu degildir.
 
 3. ODEME IADESI
@@ -327,7 +327,7 @@ Son Guncelleme: Ocak 2026`
           className="absolute inset-0 w-full h-full object-cover"
           poster="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2000&auto=format&fit=crop"
         >
-          <source src="https://videos.pexels.com/video-files/3191245/3191245-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/7004352/7004352-hd_1280_720_25fps.mp4" type="video/mp4" />
         </video>
         
         {/* Radial Gradient Overlay */}
@@ -339,14 +339,14 @@ Son Guncelleme: Ocak 2026`
             className="text-3xl md:text-5xl lg:text-6xl font-black mb-6 md:mb-8 tracking-tight text-balance leading-tight"
             style={{ textShadow: '0 4px 30px rgba(0,0,0,0.8), 0 2px 10px rgba(0,0,0,0.9)' }}
           >
-            Eryaman{"'"}in kalbinde, sadece en iyi malzemelerle hazirlanan{' '}
+            Eryaman{"'"}ın kalbinde, sadece en iyi malzemelerle hazırlanan{' '}
             <span className="text-[#E8D5B7]">butik pizza deneyimi.</span>
           </h2>
           <p 
             className="text-lg md:text-2xl text-zinc-200 mb-10 md:mb-12 font-medium"
             style={{ textShadow: '0 2px 20px rgba(0,0,0,0.9)' }}
           >
-            Dukanimiz dijital, lezzetimiz gercek.
+            Dükanımız dijital, lezzetimiz gerçek.
           </p>
           <a 
             href="#menu" 
@@ -368,8 +368,8 @@ Son Guncelleme: Ocak 2026`
       {/* MENU SECTION */}
       <section id="menu" className="px-4 md:px-6 py-16 md:py-20 max-w-7xl mx-auto">
         <div className="text-center mb-10 md:mb-12">
-          <h3 className="text-2xl md:text-4xl font-black mb-4">MENU</h3>
-          <p className="text-zinc-500 text-sm md:text-base">Tum pizzalarimiz 48 saat fermente hamur ile hazirlanir</p>
+          <h3 className="text-2xl md:text-4xl font-black mb-4">MENÜ</h3>
+          <p className="text-zinc-500 text-sm md:text-base">Tüm pizzalarımız 48 saat fermente hamur ile hazırlanır</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {PIZZAS.map((pizza) => (
@@ -397,7 +397,7 @@ Son Guncelleme: Ocak 2026`
                   onClick={() => setSelectedPizza(pizza)}
                   className="w-full bg-white/5 hover:bg-white/10 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition active:scale-95 text-sm md:text-base"
                 >
-                  <Info size={18} /> Incele & Ekle
+                  <Info size={18} /> İncele & Ekle
                 </button>
               </div>
             </div>
