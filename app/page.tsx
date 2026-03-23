@@ -346,7 +346,7 @@ Son Guncelleme: Ocak 2026`
             className="text-lg md:text-2xl text-zinc-200 mb-10 md:mb-12 font-medium"
             style={{ textShadow: '0 2px 20px rgba(0,0,0,0.9)' }}
           >
-            Dükanımız dijital, lezzetimiz gerçek.
+            Dükkanımız dijital, lezzetimiz gerçek.
           </p>
           <a 
             href="#menu" 
