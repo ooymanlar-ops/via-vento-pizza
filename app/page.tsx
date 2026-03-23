@@ -7,7 +7,7 @@ import { ShoppingCart, Info, X, ChevronRight, Instagram, CreditCard, CheckCircle
 const PIZZAS = [
   {
     id: 1,
-    name: "Margherita Originale",
+    name: "Margherita",
     description: "48 saat soğuk fermente hamur, özel San Marzano sosu, taze manda mozzarellası ve fesleğen.",
     price: 400,
     image: "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?q=80&w=1000&auto=format&fit=crop",
@@ -16,7 +16,7 @@ const PIZZAS = [
   {
     id: 2,
     name: "Via Vento Special",
-    description: "İtalyan dana salami, mantar, siyah zeytin ve közlenmiş biberin muhteşem uyumu.",
+    description: "İtalyan dana salamı, mantar, siyah zeytin ve közlenmiş biberin muhteşem uyumu.",
     price: 440,
     image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000&auto=format&fit=crop",
     ingredients: ["Mozzarella", "Dana Salam", "Mantar", "Köz Biber", "Zeytin"]
@@ -141,21 +141,15 @@ export default function ViaVentoShop() {
     }
     
     // Show loading screen
-    setCartView("loading")
+    setCartView("success")
     
-    // After 2 seconds, redirect to WhatsApp
-    setTimeout(() => {
-      const orderItems = cart.map(item => `${item.quantity}x ${item.name} (${item.price * item.quantity} TL)`).join("%0A")
-      const address = `${formData.mahalle}, ${formData.siteBlok}, Daire ${formData.daire}`
-      const note = formData.siparisNotu ? `%0ASiparis Notu: ${formData.siparisNotu}` : ""
-      
-      const message = `Merhaba, siparis vermek istiyorum:%0A%0A${orderItems}%0A%0AToplam: ${totalPrice} TL%0A%0AAd Soyad: ${formData.adSoyad}%0ATelefon: ${formData.telefon}%0AAdres: ${address}${note}`
-      
-      window.open(`https://wa.me/905323081910?text=${message}`, "_blank")
-      
-      setCartView("success")
-    }, 2000)
-  }
+    const orderItems = cart.map(item => `${item.quantity}x ${item.name} (${item.price * item.quantity} TL)`).join("%0A")
+    const address = `${formData.mahalle}, ${formData.siteBlok}, Daire: ${formData.daire}`
+    const note = formData.siparisNotu ? `%0ASipariş Notu: ${formData.siparisNotu}` : ""
+    
+    const message = `Merhaba, sipariş vermek istiyorum:%0A%0A${orderItems}%0A%0AToplam: ${totalPrice} TL%0A%0AAd Soyad: ${formData.adSoyad}%0ATelefon: ${formData.telefon}%0AAdres: ${address}${note}`
+    
+    window.location.href = `https://wa.me/905323081910?text=${message}`
 
   const handleSubmitReview = (pizzaId: number) => {
     if (!reviewForm.name || !reviewForm.comment) return
@@ -198,13 +192,13 @@ export default function ViaVentoShop() {
 
   const legalContent = {
     iptal: {
-      title: "Iptal ve Iade Kosullari",
-      content: `VIA VENTO PIZZA - IPTAL VE IADE KOSULLARI
+      title: "İptal ve İade Koşulları",
+      content: `VIA VENTO PIZZA - İPTAL VE İADE KOŞULLARI
 
-1. SIPARIS IPTALI
+1. SİPARİŞ İPTALİ
 Siparisinizi, hazirlik surecine baslanmadan once iptal edebilirsiniz. Hazirlik basladiktan sonra iptal talepleri degerlendirmeye alinmayacaktir.
 
-2. IADE KOSULLARI
+2. İADE KOŞULLARI
 - Urun teslimatinda herhangi bir sorun yasanmasi halinde, teslimat aninda kurye ile birlikte tutanak tutulmasi gerekmektedir.
 - Hatali veya eksik urun teslimatlarinda, ayni gun icinde tarafimiza bildirilmesi halinde ucretsiz yeniden gonderim yapilacaktir.
 - Musteri kaynakli (yanlis adres, ulasilamama vb.) sebeplerle gerceklesemeyen teslimatlardan Via Vento Pizza sorumlu degildir.
@@ -870,7 +864,7 @@ Son Guncelleme: Ocak 2026`
               <h1 className="text-2xl font-black tracking-tighter text-[#E8D5B7] italic">VIA VENTO</h1>
             </div>
             <p className="text-zinc-500 text-sm leading-relaxed text-center md:text-left">
-              Eryaman{"'"}in kalbinde, sadece en iyi malzemelerle hazirlanan butik pizza deneyimi. Dukanimiz dijital, lezzetimiz gercek.
+              Eryaman{"'"}ın kalbinde, sadece en iyi malzemelerle hazırlanan butik pizza deneyimi. Dükanımız dijital, lezzetimiz gerçek.
             </p>
           </div>
           <div className="flex flex-col items-center md:items-start gap-3 md:gap-4">
@@ -879,13 +873,13 @@ Son Guncelleme: Ocak 2026`
               onClick={() => setLegalModal("iptal")}
               className="text-zinc-600 hover:text-white text-sm transition text-center md:text-left py-1"
             >
-              Iptal ve Iade Kosullari
+              İptal ve İade Koşulları
             </button>
             <button 
               onClick={() => setLegalModal("mesafeli")}
               className="text-zinc-600 hover:text-white text-sm transition text-center md:text-left py-1"
             >
-              Mesafeli Satis Sozlesmesi
+              Mesafeli Satış Sözleşmesi
             </button>
             <button 
               onClick={() => setLegalModal("gizlilik")}
@@ -897,7 +891,7 @@ Son Guncelleme: Ocak 2026`
           <div className="flex flex-col items-center md:items-start gap-3 md:gap-4">
             <h4 className="font-bold text-sm uppercase tracking-widest text-zinc-400">Iletisim</h4>
             <p className="text-zinc-600 text-sm text-center md:text-left">
-              Seker Mahallesi 1434. Sokak 23/2 <br/> Etimesgut / Ankara
+              Şeker Mahallesi 1434. Sokak 23/2 <br/> Etimesgut / Ankara
             </p>
             <a 
               href="https://instagram.com/viaventopizza" 
