@@ -698,7 +698,7 @@ Son Guncelleme: Ocak 2026`
 
            {/* Bottom Actions */}
             {cart.length > 0 && cartView !== "success" && cartView !== "loading" && (
-              <div className="border-t border-white/10 p-5 md:p-6 flex-shrink-0 bg-zinc-950">
+              <div className="border-t border-white/10 p-5 md:p-6 bg-zinc-950 flex-shrink-0">
                 <div className="flex justify-between items-center mb-4 px-1">
                   <span className="text-zinc-500 font-medium">Toplam</span>
                   <span className="text-2xl font-black text-[#E8D5B7]">{totalPrice} TL</span>
