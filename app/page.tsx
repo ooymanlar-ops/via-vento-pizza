@@ -150,7 +150,7 @@ export default function ViaVentoShop() {
     const message = `Merhaba, sipariş vermek istiyorum:%0A%0A${orderItems}%0A%0AToplam: ${totalPrice} TL%0A%0AAd Soyad: ${formData.adSoyad}%0ATelefon: ${formData.telefon}%0AAdres: ${address}${note}`
     
     window.location.href = `https://wa.me/905323081910?text=${message}`
-
+  }
   const handleSubmitReview = (pizzaId: number) => {
     if (!reviewForm.name || !reviewForm.comment) return
     
