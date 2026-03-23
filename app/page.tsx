@@ -721,48 +721,48 @@ Son Guncelleme: Ocak 2026`
               )}
 
               {cartView === "success" && (
-                <div className="text-center py-8">
-                  {/* Animasyonlu Ateş İkonu */}
-                  <div className="relative w-28 h-28 mx-auto mb-6">
-                    <div className="absolute inset-0 bg-orange-500/20 rounded-full animate-ping" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-orange-600 to-red-500 rounded-full animate-pulse" />
-                    <div className="relative w-full h-full flex items-center justify-center">
-                      <span className="text-5xl animate-bounce">&#128293;</span>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-3xl font-black mb-2 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                    Siparişiniz Alındı!
-                  </h3>
-                  <p className="text-2xl font-bold text-[#E8D5B7] mb-4">
-                    Ateş Yandı! &#128293;
-                  </p>
-                  <p className="text-zinc-400 mb-6">
-                    Teşekkürler, fırın ısınmaya başladı! Sipariş detaylarınız WhatsApp üzerinden bize iletiliyor.
-                  </p>
-                  
-                  <div className="bg-white/5 rounded-2xl p-4 text-left mb-6 border border-orange-500/20">
-                    <h4 className="font-bold mb-3 text-sm text-[#E8D5B7] flex items-center gap-2">
-                      <CheckCircle size={16} className="text-green-500" />
-                      Sipariş Özeti
-                    </h4>
-                    <div className="space-y-1">
-                      <p className="text-zinc-300 text-sm font-medium">{formData.adSoyad}</p>
-                      <p className="text-zinc-400 text-sm">{formData.telefon}</p>
-                      <p className="text-zinc-400 text-sm">{formData.mahalle}, {formData.siteBlok}, Daire {formData.daire}</p>
-                    </div>
-                    <div className="border-t border-white/10 mt-3 pt-3">
-                      <p className="text-zinc-500 text-xs">Toplam: <span className="text-[#E8D5B7] font-bold">{totalPrice} TL</span></p>
-                    </div>
-                  </div>
-                  
-                  <button 
-                    onClick={handleSuccessClose}
-                    className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600 py-4 rounded-2xl font-bold transition active:scale-95 shadow-lg shadow-orange-500/25"
-                  >
-                    TAMAM
-                  </button>
-                </div>
+                <div className="text-center py-12 px-4">
+      {/* Animasyonlu Ateş İkonu */}
+      <div className="relative w-24 h-24 mx-auto mb-8">
+        <div className="absolute inset-0 bg-orange-500/20 rounded-full animate-ping" />
+        <div className="relative bg-gradient-to-t from-orange-600 to-red-500 rounded-full w-full h-full flex items-center justify-center shadow-lg shadow-orange-500/20">
+          <Check size={48} className="text-white" />
+        </div>
+      </div>
+
+      <h2 className="text-3xl font-black mb-4 text-white uppercase tracking-tight">
+        WHATSAPP'A YÖNLENDİRİLDİNİZ!
+      </h2>
+
+      <div className="bg-zinc-900/80 p-6 rounded-2xl border border-white/5 max-w-md mx-auto mb-8 text-left">
+        <p className="text-zinc-300 leading-relaxed text-lg mb-4 text-center">
+          Siparişinizin işleme alınması için açılan penceredeki mesajı <br/>
+          <span className="text-orange-500 font-bold underline text-xl">GÖNDERMENİZ MECBURİDİR.</span>
+        </p>
+        
+        <div className="bg-white/5 rounded-xl p-4 border border-white/5">
+          <h4 className="text-xs font-bold text-zinc-500 uppercase mb-2">Sipariş Özeti</h4>
+          <p className="text-zinc-400 text-sm">{formData.adSoyad}</p>
+          <p className="text-zinc-400 text-sm">{formData.mahalle}, No: {formData.daire}</p>
+          <p className="text-orange-500 font-bold mt-2">{totalPrice} TL</p>
+        </div>
+
+        <div className="h-px bg-white/5 my-4"></div>
+        <p className="text-zinc-500 text-xs italic text-center">
+          Ödeme linki, gönderdiğiniz mesajın ardından size iletilecektir.
+        </p>
+      </div>
+
+      <button 
+        onClick={() => {
+          setCartView("cart");
+          setIsCartOpen(false);
+        }} 
+        className="w-full bg-gradient-to-r from-orange-500 to-red-500 py-4 rounded-2xl font-black text-white shadow-lg shadow-orange-500/20 transition-active active:scale-95"
+      >
+        ANLADIM, MENÜYE DÖN
+      </button>
+    </div>
               )}
             </div>
 
