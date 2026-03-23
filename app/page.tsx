@@ -717,54 +717,52 @@ Son Guncelleme: Ocak 2026`
                   <p className="text-zinc-400">
                     Lutfen bekleyin, WhatsApp{"'"}a yonlendiriliyorsunuz.
                   </p>
-                </div>
-              )}
-
-              {cartView === "success" && (
-                <div className="text-center py-12 px-4">
-      {/* Animasyonlu Ateş İkonu */}
-      <div className="relative w-24 h-24 mx-auto mb-8">
-        <div className="absolute inset-0 bg-orange-500/20 rounded-full animate-ping" />
-        <div className="relative bg-gradient-to-t from-orange-600 to-red-500 rounded-full w-full h-full flex items-center justify-center shadow-lg shadow-orange-500/20">
-          <Check size={48} className="text-white" />
-        </div>
-      </div>
-
-      <h2 className="text-3xl font-black mb-4 text-white uppercase tracking-tight">
-        WHATSAPP'A YÖNLENDİRİLDİNİZ!
-      </h2>
-
-      <div className="bg-zinc-900/80 p-6 rounded-2xl border border-white/5 max-w-md mx-auto mb-8 text-left">
-        <p className="text-zinc-300 leading-relaxed text-lg mb-4 text-center">
-          Siparişinizin işleme alınması için açılan penceredeki mesajı <br/>
-          <span className="text-orange-500 font-bold underline text-xl">GÖNDERMENİZ MECBURİDİR.</span>
-        </p>
-        
-        <div className="bg-white/5 rounded-xl p-4 border border-white/5">
-          <h4 className="text-xs font-bold text-zinc-500 uppercase mb-2">Sipariş Özeti</h4>
-          <p className="text-zinc-400 text-sm">{formData.adSoyad}</p>
-          <p className="text-zinc-400 text-sm">{formData.mahalle}, No: {formData.daire}</p>
-          <p className="text-orange-500 font-bold mt-2">{totalPrice} TL</p>
-        </div>
-
-        <div className="h-px bg-white/5 my-4"></div>
-        <p className="text-zinc-500 text-xs italic text-center">
-          Ödeme linki, gönderdiğiniz mesajın ardından size iletilecektir.
-        </p>
-      </div>
-
-      <button 
-        onClick={() => {
-          setCartView("cart");
-          setIsCartOpen(false);
-        }} 
-        className="w-full bg-gradient-to-r from-orange-500 to-red-500 py-4 rounded-2xl font-black text-white shadow-lg shadow-orange-500/20 transition-active active:scale-95"
-      >
-        ANLADIM, MENÜYE DÖN
-      </button>
-    </div>
-              )}
+               </div>
+    )}
+{cartView === "success" && (
+        <div className="text-center py-12 px-4">
+          <div className="relative w-24 h-24 mx-auto mb-8 text-white">
+            <div className="absolute inset-0 bg-orange-500/20 rounded-full animate-ping" />
+            <div className="relative bg-gradient-to-t from-orange-600 to-red-500 rounded-full w-full h-full flex items-center justify-center shadow-lg shadow-orange-500/20">
+              <Check size={48} />
             </div>
+          </div>
+
+          <h2 className="text-2xl font-black mb-4 text-white uppercase italic tracking-tight">
+            WHATSAPP'A YÖNLENDİRİLDİNİZ!
+          </h2>
+
+          <div className="bg-zinc-900/80 p-6 rounded-2xl border border-white/5 max-w-md mx-auto mb-8">
+            <p className="text-zinc-300 leading-relaxed mb-4 text-center">
+              Siparişinizin bize ulaşması için açılan WhatsApp mesajını <br/>
+              <span className="text-orange-500 font-bold underline text-lg uppercase">Göndermeniz Mecburidir.</span>
+            </p>
+            
+            <div className="bg-white/5 rounded-xl p-4 border border-white/5 text-center mb-4">
+              <h4 className="text-[10px] font-bold text-zinc-500 uppercase mb-2 tracking-widest text-center">Sipariş Özeti</h4>
+              <p className="text-zinc-400 text-sm">{formData.adSoyad}</p>
+              <p className="text-orange-500 font-bold mt-2 text-lg">{totalPrice} TL</p>
+            </div>
+
+            <div className="h-px bg-white/5 my-4"></div>
+            
+            <p className="text-zinc-500 text-xs italic text-center leading-relaxed">
+              Ödeme linki, mesajınız bize ulaştıktan sonra <br /> WhatsApp üzerinden iletilecektir.
+            </p>
+          </div>
+        </div>
+)}
+      </div>
+    );
+};
+      
+
+        <button 
+          onClick={() => {
+            setCartView("cart");
+            setIsCartOpen(false);
+          }} 
+          className="w-full bg-gradient-to-r from-orange-500 to-red-500 py-4 rounded-2xl font
 
             {/* Bottom Actions */}
             {cart.length > 0 && cartView !== "success" && cartView !== "loading" && (
