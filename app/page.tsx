@@ -735,6 +735,9 @@ Son Guncelleme: Ocak 2026`
               </div>
             )}
           </div>
+              )}
+            </div>
+          </div>
         </div>
       )}
 
