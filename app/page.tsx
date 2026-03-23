@@ -781,10 +781,6 @@ Son Guncelleme: Ocak 2026`
          )}
         </div>
       )}
-    </div>
- )}
-        </div>
-      )}
 
       {/* LEGAL MODAL */}
       {legalModal && (
@@ -829,53 +825,27 @@ Son Guncelleme: Ocak 2026`
           <p className="text-zinc-300 text-base md:text-lg leading-relaxed mb-6">
             Her şey 5 yıl önce, kendi mutfağımızdaki o küçük ankastre fırında başladı...
           </p>
-          <p className="text-zinc-300 text-base md:text-lg leading-relaxed mb-6">
-            5 yıldır her sabah aynı heyecanla hamurumuzu dinlendiriyor, fırınımızın sağladığı o yüksek ve dengeli ısıyı ustalığımızla birleştiriyoruz.
-          </p>
-          <p className="text-zinc-300 text-base md:text-lg leading-relaxed mb-6">
-            Şimdi bu tutkuyu Eryaman{"'"}da sizlerle paylaşıyoruz.
-          </p>
           <p className="text-zinc-400 text-base md:text-lg italic mt-8">
             Bu yolculukta soframıza konuk olduğunuz için teşekkürler. Afiyetle!
           </p>
         </div>
       </section>
 
-      {/* PRICING NOTE */}
-      <section className="bg-black py-6 px-4 md:px-6 text-center border-t border-white/5">
-        <p className="text-zinc-500 text-sm">Fiyatlarimiza KDV Dahildir</p>
-      </section>
-
       {/* FOOTER */}
       <footer className="bg-zinc-950 border-t border-white/5 py-16 md:py-20 px-4 md:px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-10 md:mb-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <div className="flex items-center gap-3 mb-6 justify-center md:justify-start">
-              <Image
-                src="/images/logo.png"
-                alt="Via Vento Logo"
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-              <h1 className="text-2xl font-black tracking-tighter text-[#E8D5B7] italic">VIA VENTO</h1>
-            </div>
-            <p className="text-zinc-500 text-sm leading-relaxed text-center md:text-left">
-              Eryaman{"'"}ın kalbinde, sadece en iyi malzemelerle hazırlanan butik pizza deneyimi.
-            </p>
+            <h1 className="text-2xl font-black text-[#E8D5B7] italic">VIA VENTO</h1>
+            <p className="text-zinc-500 text-sm mt-4">Eryaman'ın kalbinde butik pizza deneyimi.</p>
           </div>
-          <div className="flex flex-col items-center md:items-start gap-3 md:gap-4">
-            <h4 className="font-bold text-sm uppercase tracking-widest text-zinc-400">Yasal</h4>
-            <button onClick={() => setLegalModal("iptal")} className="text-zinc-600 hover:text-white text-sm py-1">İptal ve İade Koşulları</button>
-            <button onClick={() => setLegalModal("mesafeli")} className="text-zinc-600 hover:text-white text-sm py-1">Mesafeli Satış Sözleşmesi</button>
-            <button onClick={() => setLegalModal("gizlilik")} className="text-zinc-600 hover:text-white text-sm py-1">Gizlilik Politikası</button>
+          <div className="flex flex-col gap-2">
+            <h4 className="font-bold text-zinc-400">Yasal</h4>
+            <button onClick={() => setLegalModal("iptal")} className="text-zinc-600 hover:text-white text-sm text-left">İptal ve İade</button>
+            <button onClick={() => setLegalModal("mesafeli")} className="text-zinc-600 hover:text-white text-sm text-left">Mesafeli Satış</button>
           </div>
-          <div className="flex flex-col items-center md:items-start gap-3 md:gap-4">
-            <h4 className="font-bold text-sm uppercase tracking-widest text-zinc-400">Iletisim</h4>
-            <p className="text-zinc-600 text-sm text-center md:text-left">Şeker Mahallesi 1434. Sokak 23/2 <br/> Etimesgut / Ankara</p>
-            <a href="https://instagram.com/viaventopizza" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#E8D5B7] font-bold py-1">
-              <Instagram size={20} /> @viaventopizza
-            </a>
+          <div className="flex flex-col gap-2">
+            <h4 className="font-bold text-zinc-400">İletişim</h4>
+            <a href="https://instagram.com/viaventopizza" target="_blank" className="text-[#E8D5B7] font-bold">@viaventopizza</a>
           </div>
         </div>
       </footer>
@@ -885,11 +855,11 @@ Son Guncelleme: Ocak 2026`
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-zinc-900 border-t border-white/10 p-4 safe-area-inset-bottom">
           <button
             onClick={() => setIsCartOpen(true)}
-            className="w-full bg-[#E8D5B7] text-black py-4 rounded-2xl font-bold flex items-center justify-center gap-3 active:scale-95 transition"
+            className="w-full bg-[#E8D5B7] text-black py-4 rounded-2xl font-bold flex items-center justify-center gap-3"
           >
             <ShoppingCart size={20} />
             <span>Sepete Git</span>
-            <span className="bg-black/20 px-3 py-1 rounded-full text-sm">{totalItems} ürün - {totalPrice} TL</span>
+            <span className="bg-black/20 px-3 py-1 rounded-full text-sm">{totalItems} ürün</span>
           </button>
         </div>
       )}
