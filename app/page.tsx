@@ -359,7 +359,7 @@ Son Guncelleme: Ocak 2026`
             className="inline-flex items-center gap-2 bg-white text-black px-8 md:px-10 py-4 md:py-5 rounded-full font-bold hover:bg-[#E8D5B7] hover:text-black transition-all transform hover:scale-105 active:scale-95 text-base md:text-lg shadow-2xl"
             style={{ boxShadow: '0 10px 50px rgba(232,213,183,0.3)' }}
           >
-            SIPARISE BASLA <ChevronRight size={24} />
+            SİPARİŞE BAŞLA <ChevronRight size={24} />
           </a>
         </div>
         
