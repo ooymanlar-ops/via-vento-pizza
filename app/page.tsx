@@ -563,8 +563,8 @@ Son Guncelleme: Ocak 2026`
               <h2 className="text-xl md:text-2xl font-black flex-1">
                 {cartView === "cart" && "Sepetim"}
                 {cartView === "checkout" && "Teslimat Bilgileri"}
-{cartView === "loading" && "Ödeme İşleniyor"}
-                    {cartView === "success" && "Sipariş Onaylandı"}
+                {cartView === "loading" && "Ödeme İşleniyor"}
+                {cartView === "success" && "Sipariş Onaylandı"}
               </h2>
               <button onClick={closeCart} className="p-2 hover:bg-white/10 rounded-full active:scale-90">
                 <X size={24} />
@@ -623,162 +623,99 @@ Son Guncelleme: Ocak 2026`
               )}
 
               {cartView === "checkout" && (
-                <form id="checkoutForm" onSubmit={handlePayment} className="space-y-4">
+                <form id="checkoutForm" onSubmit={handlePayment} className="space-y-4 pb-20">
                   <div>
                     <label className="block text-sm font-medium text-zinc-400 mb-2">Ad Soyad *</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.adSoyad}
-                      onChange={(e) => setFormData({...formData, adSoyad: e.target.value})}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#E8D5B7]/50 transition text-base"
-                      placeholder="Adiniz Soyadiniz"
-                    />
+                    <input type="text" required value={formData.adSoyad} onChange={(e) => setFormData({...formData, adSoyad: e.target.value})} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#E8D5B7]/50 transition text-base" placeholder="Adiniz Soyadiniz" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-zinc-400 mb-2">Telefon *</label>
-                    <input
-                      type="tel"
-                      required
-                      value={formData.telefon}
-                      onChange={(e) => setFormData({...formData, telefon: e.target.value})}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#E8D5B7]/50 transition text-base"
-                      placeholder="05XX XXX XX XX"
-                    />
+                    <input type="tel" required value={formData.telefon} onChange={(e) => setFormData({...formData, telefon: e.target.value})} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#E8D5B7]/50 transition text-base" placeholder="05XX XXX XX XX" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-zinc-400 mb-2">Mahalle *</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.mahalle}
-                      onChange={(e) => setFormData({...formData, mahalle: e.target.value})}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#E8D5B7]/50 transition text-base"
-                      placeholder="Eryaman bolgesi mahalle adi"
-                    />
+                    <input type="text" required value={formData.mahalle} onChange={(e) => setFormData({...formData, mahalle: e.target.value})} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#E8D5B7]/50 transition text-base" placeholder="Eryaman bolgesi mahalle adi" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-zinc-400 mb-2">Site / Blok *</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.siteBlok}
-                      onChange={(e) => setFormData({...formData, siteBlok: e.target.value})}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#E8D5B7]/50 transition text-base"
-                      placeholder="Site adi ve blok numarasi"
-                    />
+                    <input type="text" required value={formData.siteBlok} onChange={(e) => setFormData({...formData, siteBlok: e.target.value})} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#E8D5B7]/50 transition text-base" placeholder="Site adi ve blok numarasi" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-zinc-400 mb-2">Daire No *</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.daire}
-                      onChange={(e) => setFormData({...formData, daire: e.target.value})}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#E8D5B7]/50 transition text-base"
-                      placeholder="Daire numarasi"
-                    />
+                    <input type="text" required value={formData.daire} onChange={(e) => setFormData({...formData, daire: e.target.value})} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#E8D5B7]/50 transition text-base" placeholder="Daire numarasi" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-zinc-400 mb-2">Sipariş Notu</label>
-                    <textarea
-                      value={formData.siparisNotu}
-                      onChange={(e) => setFormData({...formData, siparisNotu: e.target.value})}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#E8D5B7]/50 transition resize-none text-base"
-                      rows={3}
-                      placeholder="Ekstra istekleriniz (opsiyonel)"
-                    />
+                    <textarea value={formData.siparisNotu} onChange={(e) => setFormData({...formData, siparisNotu: e.target.value})} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#E8D5B7]/50 transition resize-none text-base" rows={3} placeholder="Ekstra istekleriniz (opsiyonel)" />
                   </div>
-                  
-                  {/* Payment Icons */}
                   <div className="pt-4 border-t border-white/10">
-                    <p className="text-xs text-zinc-500 mb-3 text-center">Guvenli odeme</p>
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="bg-white/10 px-3 py-1.5 rounded flex items-center gap-2">
-                        <span className="text-blue-400 font-bold text-xs">VISA</span>
-                        <div className="flex">
-                          <div className="w-4 h-4 rounded-full bg-red-500"></div>
-                          <div className="w-4 h-4 rounded-full bg-yellow-500 -ml-1.5"></div>
-                        </div>
-                        <span className="text-zinc-400 font-bold text-xs">TROY</span>
-                      </div>
+                    <p className="text-xs text-zinc-500 mb-3 text-center uppercase tracking-widest">Guvenli odeme</p>
+                    <div className="flex items-center justify-center gap-4 grayscale opacity-50">
+                      <span className="text-white font-black text-xs">VISA</span>
+                      <span className="text-white font-black text-xs">MASTERCARD</span>
+                      <span className="text-white font-black text-xs">TROY</span>
                     </div>
-                    <p className="text-xs text-zinc-600 mt-2 text-center">PayTR Guvencesiyle</p>
+                    <p className="text-[10px] text-zinc-600 mt-3 text-center uppercase italic">PayTR Altyapısı Kullanılmaktadır</p>
                   </div>
                 </form>
               )}
 
               {cartView === "loading" && (
-                <div className="text-center py-16">
-                  <div className="w-20 h-20 bg-[#E8D5B7]/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Loader2 size={48} className="text-[#E8D5B7] animate-spin" />
+                <div className="text-center py-24">
+                  <div className="w-20 h-20 bg-[#E8D5B7]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Loader2 size={40} className="text-[#E8D5B7] animate-spin" />
                   </div>
-                  <h3 className="text-2xl font-black mb-3">Ödemeniz PayTR Güvencesiyle Hazırlanıyor...</h3>
-                  <p className="text-zinc-400">
-                    Lutfen bekleyin, WhatsApp{"'"}a yonlendiriliyorsunuz.
-                  </p>
-               </div>
-    )}
-{cartView === "success" && (
-        <div className="text-center py-12 px-4">
-          <div className="relative w-24 h-24 mx-auto mb-8 text-white">
-            <div className="absolute inset-0 bg-orange-500/20 rounded-full animate-ping" />
-            <div className="relative bg-gradient-to-t from-orange-600 to-red-500 rounded-full w-full h-full flex items-center justify-center shadow-lg shadow-orange-500/20">
-              <Check size={48} />
+                  <h3 className="text-xl font-bold mb-2">Hazırlanıyor...</h3>
+                  <p className="text-zinc-500 text-sm px-8">WhatsApp'a yönlendiriliyorsunuz, lütfen bekleyin.</p>
+                </div>
+              )}
+
+              {cartView === "success" && (
+                <div className="text-center py-12">
+                  <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-green-500/20">
+                    <span className="text-green-500 text-4xl">✓</span>
+                  </div>
+                  <h2 className="text-2xl font-black mb-6 text-white italic">YÖNLENDİRİLDİNİZ!</h2>
+                  <div className="bg-white/5 p-6 rounded-3xl border border-white/5 mb-8 text-center">
+                    <p className="text-zinc-300 text-sm leading-relaxed mb-4">
+                      Siparişinizin onaylanması için WhatsApp mesajını <br/>
+                      <strong className="text-orange-500 underline text-base uppercase">Göndermeniz Şarttır.</strong>
+                    </p>
+                    <div className="bg-black/40 rounded-2xl p-4 mb-4">
+                      <p className="text-zinc-500 text-[10px] uppercase mb-1">Toplam Tutar</p>
+                      <p className="text-[#E8D5B7] font-black text-xl">{totalPrice} TL</p>
+                    </div>
+                    <p className="text-zinc-500 text-xs italic leading-relaxed">
+                      Ödeme linki mesajınızdan sonra <br /> size gönderilecektir.
+                    </p>
+                  </div>
+                  <button onClick={closeCart} className="w-full bg-white/5 hover:bg-white/10 py-4 rounded-2xl font-bold text-zinc-400 transition">
+                    KAPAT VE MENÜYE DÖN
+                  </button>
+                </div>
+              )}
             </div>
+
+            {/* Bottom Actions - Sadece sepet ve ödeme formundayken görünür */}
+            {cart.length > 0 && cartView !== "success" && cartView !== "loading" && (
+              <div className="border-t border-white/10 p-5 md:p-6 bg-zinc-950 flex-shrink-0">
+                <div className="flex justify-between items-center mb-4 px-1">
+                  <span className="text-zinc-500 font-medium">Toplam</span>
+                  <span className="text-2xl font-black text-[#E8D5B7]">{totalPrice} TL</span>
+                </div>
+                
+                {cartView === "cart" ? (
+                  <button onClick={handleCheckout} className="w-full bg-[#E8D5B7] text-black hover:bg-white py-4 rounded-2xl font-black transition active:scale-95 shadow-lg shadow-orange-950/20">
+                    SİPARİŞİ TAMAMLA
+                  </button>
+                ) : (
+                  <button type="submit" form="checkoutForm" className="w-full bg-[#E8D5B7] text-black hover:bg-white py-4 rounded-2xl font-black transition flex items-center justify-center gap-2 active:scale-95">
+                    WHATSAPP'A GİT
+                  </button>
+                )}
+              </div>
+            )}
           </div>
-
-          <h2 className="text-2xl font-black mb-4 text-white uppercase italic tracking-tight">
-            WHATSAPP'A YÖNLENDİRİLDİNİZ!
-          </h2>
-
-          <div className="bg-zinc-900/80 p-6 rounded-2xl border border-white/5 max-w-md mx-auto mb-8">
-            <p className="text-zinc-300 leading-relaxed mb-4 text-center">
-              Siparişinizin bize ulaşması için açılan WhatsApp mesajını <br/>
-              <span className="text-orange-500 font-bold underline text-lg uppercase">Göndermeniz Mecburidir.</span>
-            </p>
-            
-            <div className="bg-white/5 rounded-xl p-4 border border-white/5 text-center mb-4">
-              <h4 className="text-[10px] font-bold text-zinc-500 uppercase mb-2 tracking-widest text-center">Sipariş Özeti</h4>
-              <p className="text-zinc-400 text-sm">{formData.adSoyad}</p>
-              <p className="text-orange-500 font-bold mt-2 text-lg">{totalPrice} TL</p>
-            </div>
-
-            <div className="h-px bg-white/5 my-4"></div>
-            
-            <p className="text-zinc-500 text-xs italic text-center leading-relaxed">
-              Ödeme linki, mesajınız bize ulaştıktan sonra <br /> WhatsApp üzerinden iletilecektir.
-            </p>
-          </div>
-        </div>
-      )}
-      </div>
-
-      {/* Bottom Actions */}
-      {cart.length > 0 && cartView !== "success" && cartView !== "loading" && (
-        <div className="border-t border-white/10 p-5 md:p-6 flex-shrink-0 bg-zinc-900">
-          <div className="flex justify-between items-center mb-4">
-            <span className="text-zinc-400">Toplam</span>
-            <span className="text-xl md:text-2xl font-black text-[#E8D5B7]">{totalPrice} TL</span>
-          </div>
-          
-          {cartView === "cart" ? (
-            <button
-              onClick={handleCheckout}
-              className="w-full bg-[#E8D5B7] text-black hover:bg-[#D4C4A8] py-4 rounded-2xl font-bold transition active:scale-95"
-            >
-              SİPARİŞİ TAMAMLA
-            </button>
-          ) : (
-            <button
-              type="submit"
-              form="checkoutForm"
-              className="w-full bg-[#E8D5B7] text-black hover:bg-[#D4C4A8] py-4 rounded-2xl font-bold transition flex items-center justify-center gap-2 active:scale-95"
-            >
-              <CreditCard size={20} />
-              ÖDEME YAP
-            </button>
-         )}
         </div>
       )}
 
