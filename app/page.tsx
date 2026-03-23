@@ -320,15 +320,15 @@ Son Guncelleme: Ocak 2026`
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2000&auto=format&fit=crop"
-        >
-          <source src="https://videos.pexels.com/video-files/7004352/7004352-hd_1280_720_25fps.mp4" type="video/mp4" />
-        </video>
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="absolute inset-0 w-full h-full object-cover"
+>
+  <source src="https://www.pexels.com/video/close-up-shot-of-a-person-kneading-a-dough-7004352/.mp4" type="video/mp4" />
+</video>
         
         {/* Radial Gradient Overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.4)_0%,rgba(0,0,0,0.85)_70%,rgba(0,0,0,0.95)_100%)]" />
