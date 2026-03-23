@@ -891,7 +891,7 @@ Son Guncelleme: Ocak 2026`
               onClick={() => setLegalModal("gizlilik")}
               className="text-zinc-600 hover:text-white text-sm transition text-center md:text-left py-1"
             >
-              Gizlilik Politikasi
+              Gizlilik Politikası
             </button>
           </div>
           <div className="flex flex-col items-center md:items-start gap-3 md:gap-4">
