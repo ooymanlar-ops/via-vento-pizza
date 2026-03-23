@@ -723,7 +723,7 @@ Son Guncelleme: Ocak 2026`
               </div>
             )}
 
-            {/* Bilgisayar Kullanıcıları İçin Çıkış Butonu */}
+            {/* Bilgisayar İçin Geri Dönüş Butonu */}
             {cartView === "success" && (
               <div className="p-6 bg-zinc-950 border-t border-white/10 flex-shrink-0">
                 <button 
@@ -734,9 +734,6 @@ Son Guncelleme: Ocak 2026`
                 </button>
               </div>
             )}
-          </div>
-              )}
-            </div>
           </div>
         </div>
       )}
