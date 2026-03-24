@@ -781,6 +781,7 @@ Son Guncelleme: Ocak 2026`
           <p className="text-zinc-300 text-base md:text-lg leading-relaxed mb-6">
             "Her şey 5 yıl önce, kendi mutfağımızdaki o küçük ankastre fırında başladı. İlk hamuru açtığımızda, sadece bir pizza değil, bir tutkuyu mayaladığımızı biliyorduk. Napoli’nin o gerçek dokusuna ve lezzetine olan merakımız bizi rahat bırakmadı; mutfaktaki fırın bu tutkuya yetmeyince pes etmedik, araştırdık ve hayalimizdeki o mükemmel sonucu yakalamak için İngiltere’den profesyonel fırınımızı binbir zahmetle getirttik.
 
+
 5 yıldır her sabah aynı heyecanla hamurumuzu dinlendiriyor, fırınımızın sağladığı o yüksek ve dengeli ısıyı ustalığımızla birleştiriyoruz. Şimdi bu tutkuyu Eryaman’da sizlerle paylaşıyoruz. Bilmenizi isteriz ki; bu site üzerinden verdiğiniz her sipariş, bizim için sadece bir satış değil, hayalini kurduğumuz o gerçek dükkanımızın harcına konulan bir tuğla, fırınımızın ateşine katılan bir güç...
 
           </p>
