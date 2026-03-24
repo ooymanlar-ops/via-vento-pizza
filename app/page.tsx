@@ -779,7 +779,10 @@ Son Guncelleme: Ocak 2026`
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl md:text-4xl font-black mb-8 text-[#E8D5B7]">Bir Tutkunun Hikayesi</h3>
           <p className="text-zinc-300 text-base md:text-lg leading-relaxed mb-6">
-            Her şey 5 yıl önce, kendi mutfağımızdaki o küçük ankastre fırında başladı...
+            "Her şey 5 yıl önce, kendi mutfağımızdaki o küçük ankastre fırında başladı. İlk hamuru açtığımızda, sadece bir pizza değil, bir tutkuyu mayaladığımızı biliyorduk. Napoli’nin o gerçek dokusuna ve lezzetine olan merakımız bizi rahat bırakmadı; mutfaktaki fırın bu tutkuya yetmeyince pes etmedik, araştırdık ve hayalimizdeki o mükemmel sonucu yakalamak için İngiltere’den profesyonel fırınımızı binbir zahmetle getirttik.
+
+5 yıldır her sabah aynı heyecanla hamurumuzu dinlendiriyor, fırınımızın sağladığı o yüksek ve dengeli ısıyı ustalığımızla birleştiriyoruz. Şimdi bu tutkuyu Eryaman’da sizlerle paylaşıyoruz. Bilmenizi isteriz ki; bu site üzerinden verdiğiniz her sipariş, bizim için sadece bir satış değil, hayalini kurduğumuz o gerçek dükkanımızın harcına konulan bir tuğla, fırınımızın ateşine katılan bir güç...
+
           </p>
           <p className="text-zinc-400 text-base md:text-lg italic mt-8">
             Bu yolculukta soframıza konuk olduğunuz için teşekkürler. Afiyetle!
