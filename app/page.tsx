@@ -774,16 +774,18 @@ Son Guncelleme: Ocak 2026`
         </div>
       )}
 
-      {/* STORY SECTION */}
+       {/* STORY SECTION */}
       <section className="bg-zinc-900/50 py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl md:text-4xl font-black mb-8 text-[#E8D5B7]">Bir Tutkunun Hikayesi</h3>
           <p className="text-zinc-300 text-base md:text-lg leading-relaxed mb-6">
-            "Her şey 5 yıl önce, kendi mutfağımızdaki o küçük ankastre fırında başladı. İlk hamuru açtığımızda, sadece bir pizza değil, bir tutkuyu mayaladığımızı biliyorduk. Napoli’nin o gerçek dokusuna ve lezzetine olan merakımız bizi rahat bırakmadı; mutfaktaki fırın bu tutkuya yetmeyince pes etmedik, araştırdık ve hayalimizdeki o mükemmel sonucu yakalamak için İngiltere’den profesyonel fırınımızı binbir zahmetle getirttik.
-
-
-5 yıldır her sabah aynı heyecanla hamurumuzu dinlendiriyor, fırınımızın sağladığı o yüksek ve dengeli ısıyı ustalığımızla birleştiriyoruz. Şimdi bu tutkuyu Eryaman’da sizlerle paylaşıyoruz. Bilmenizi isteriz ki; bu site üzerinden verdiğiniz her sipariş, bizim için sadece bir satış değil, hayalini kurduğumuz o gerçek dükkanımızın harcına konulan bir tuğla, fırınımızın ateşine katılan bir güç...
-
+            Her şey 5 yıl önce, kendi mutfağımızdaki o küçük ankastre fırında başladı. İlk hamuru açtığımızda, sadece bir pizza değil, bir tutkuyu mayaladığımızı biliyorduk. Napoli{"'"}nin o gerçek dokusuna ve lezzetine olan merakımız bizi rahat bırakmadı; mutfaktaki fırın bu tutkuya yetmeyince pes etmedik, araştırdık ve hayalimizdeki o mükemmel sonucu yakalamak için İngiltere{"'"}den profesyonel fırınımızı binbir zahmetle getirttik.
+          </p>
+          <p className="text-zinc-300 text-base md:text-lg leading-relaxed mb-6">
+            5 yıldır her sabah aynı heyecanla hamurumuzu dinlendiriyor, fırınımızın sağladığı o yüksek ve dengeli ısıyı ustalığımızla birleştiriyoruz. Bu eşsiz lezzeti evinizde en taze haliyle, sanki o an fırından çıkmış gibi deneyimleyebilmeniz için pizzalarımızı özel vakumlu paketlerinde hazırlıyor ve dondurulmuş olarak size ulaştırıyoruz.
+          </p>
+          <p className="text-zinc-300 text-base md:text-lg leading-relaxed mb-6">
+            Şimdi bu tutkuyu Eryaman{"'"}da sizlerle paylaşıyoruz. Bilmenizi isteriz ki; bu site üzerinden verdiğiniz her sipariş, bizim için sadece bir satış değil, hayalini kurduğumuz o gerçek dükkanımızın harcına konulan bir tuğla, fırınımızın ateşine katılan bir güç...
           </p>
           <p className="text-zinc-400 text-base md:text-lg italic mt-8">
             Bu yolculukta soframıza konuk olduğunuz için teşekkürler. Afiyetle!
@@ -791,21 +793,81 @@ Son Guncelleme: Ocak 2026`
         </div>
       </section>
 
+      {/* PRICING NOTE */}
+      <section className="bg-black py-6 px-4 md:px-6 text-center border-t border-white/5">
+        <p className="text-zinc-500 text-sm">Fiyatlarimiza KDV Dahildir</p>
+      </section>
+
       {/* FOOTER */}
       <footer className="bg-zinc-950 border-t border-white/5 py-16 md:py-20 px-4 md:px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-10 md:mb-12">
           <div>
-            <h1 className="text-2xl font-black text-[#E8D5B7] italic">VIA VENTO</h1>
-            <p className="text-zinc-500 text-sm mt-4">Eryaman'ın kalbinde butik pizza deneyimi.</p>
+            <div className="flex items-center gap-3 mb-6 justify-center md:justify-start">
+              <Image
+                src="/images/logo.png"
+                alt="Via Vento Logo"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <h1 className="text-2xl font-black tracking-tighter text-[#E8D5B7] italic">VIA VENTO</h1>
+            </div>
+            <p className="text-zinc-500 text-sm leading-relaxed text-center md:text-left">
+              Eryaman{"'"}in kalbinde, sadece en iyi malzemelerle hazirlanan butik pizza deneyimi. Dukanimiz dijital, lezzetimiz gercek.
+            </p>
           </div>
-          <div className="flex flex-col gap-2">
-            <h4 className="font-bold text-zinc-400">Yasal</h4>
-            <button onClick={() => setLegalModal("iptal")} className="text-zinc-600 hover:text-white text-sm text-left">İptal ve İade</button>
-            <button onClick={() => setLegalModal("mesafeli")} className="text-zinc-600 hover:text-white text-sm text-left">Mesafeli Satış</button>
+          <div className="flex flex-col items-center md:items-start gap-3 md:gap-4">
+            <h4 className="font-bold text-sm uppercase tracking-widest text-zinc-400">Yasal</h4>
+            <button 
+              onClick={() => setLegalModal("iptal")}
+              className="text-zinc-600 hover:text-white text-sm transition text-center md:text-left py-1"
+            >
+              Iptal ve Iade Kosullari
+            </button>
+            <button 
+              onClick={() => setLegalModal("mesafeli")}
+              className="text-zinc-600 hover:text-white text-sm transition text-center md:text-left py-1"
+            >
+              Mesafeli Satis Sozlesmesi
+            </button>
+            <button 
+              onClick={() => setLegalModal("gizlilik")}
+              className="text-zinc-600 hover:text-white text-sm transition text-center md:text-left py-1"
+            >
+              Gizlilik Politikasi
+            </button>
           </div>
-          <div className="flex flex-col gap-2">
-            <h4 className="font-bold text-zinc-400">İletişim</h4>
-            <a href="https://instagram.com/viaventopizza" target="_blank" className="text-[#E8D5B7] font-bold">@viaventopizza</a>
+          <div className="flex flex-col items-center md:items-start gap-3 md:gap-4">
+            <h4 className="font-bold text-sm uppercase tracking-widest text-zinc-400">Iletisim</h4>
+            <p className="text-zinc-600 text-sm text-center md:text-left">
+              Seker Mahallesi 1434. Sokak 23/2 <br/> Etimesgut / Ankara
+            </p>
+            <a 
+              href="https://instagram.com/viaventopizza" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-[#E8D5B7] font-bold hover:text-white transition py-1"
+            >
+              <Instagram size={20} /> @viaventopizza
+            </a>
+          </div>
+        </div>
+        
+        {/* Payment Logos & Copyright */}
+        <div className="border-t border-white/5 pt-8 max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <p className="text-zinc-700 text-xs order-2 md:order-1">2026 Via Vento Pizza. Tum haklari saklidir.</p>
+            <div className="flex flex-col md:flex-row items-center gap-4 order-1 md:order-2">
+              <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-lg">
+                <span className="text-blue-400 font-bold text-sm">VISA</span>
+                <div className="flex">
+                  <div className="w-5 h-5 rounded-full bg-red-500"></div>
+                  <div className="w-5 h-5 rounded-full bg-yellow-500 -ml-2"></div>
+                </div>
+                <span className="text-zinc-400 font-bold text-sm">TROY</span>
+              </div>
+              <span className="text-zinc-500 text-xs">PayTR Guvencesiyle</span>
+            </div>
           </div>
         </div>
       </footer>
@@ -815,14 +877,14 @@ Son Guncelleme: Ocak 2026`
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-zinc-900 border-t border-white/10 p-4 safe-area-inset-bottom">
           <button
             onClick={() => setIsCartOpen(true)}
-            className="w-full bg-[#E8D5B7] text-black py-4 rounded-2xl font-bold flex items-center justify-center gap-3"
+            className="w-full bg-[#E8D5B7] text-black py-4 rounded-2xl font-bold flex items-center justify-center gap-3 active:scale-95 transition"
           >
             <ShoppingCart size={20} />
             <span>Sepete Git</span>
-            <span className="bg-black/20 px-3 py-1 rounded-full text-sm">{totalItems} ürün</span>
+            <span className="bg-black/20 px-3 py-1 rounded-full text-sm">{totalItems} ürün - {totalPrice} TL</span>
           </button>
         </div>
       )}
     </div>
-  );
+  )
 }
